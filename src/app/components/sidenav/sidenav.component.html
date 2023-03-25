@@ -1,0 +1,23 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav>
+      <mat-nav-list>
+          <a mat-list-item routerLinkActive="list-item-active" routerLink="/myBank"> Dashboard </a>
+          <a mat-list-item routerLinkActive="list-item-active" routerLink="/myBank/accountDetails"> Account Details </a>
+          <a mat-list-item routerLinkActive="list-item-active" routerLink="/myBank/balance"> Balance </a>
+          <a mat-list-item routerLinkActive="list-item-active" routerLink="/myBank/transactions"> Transactios </a>
+          <a mat-list-item routerLinkActive="list-item-active" routerLink="/myBank/transferMoney"> Transfer Money </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div style="height: 88vh;">
+          <mat-toolbar color="primary">
+            <button  mat-icon-button 
+                     aria-label="Menu"
+                     (click)="sidenav.open()">
+            <mat-icon>menu</mat-icon>
+          </button>  
+    </mat-toolbar>
+      <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
